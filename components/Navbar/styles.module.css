@@ -1,0 +1,24 @@
+.navbar {
+  background-color: var(--secondaryColor);
+}
+
+.navbar .navbar_brand {
+  color: var(--textColor);
+}
+
+.navbar .navbar_brand:hover {
+  color: var(--textColor);
+}
+
+.navbar .text_purple {
+  text-shadow: 0 0 5px rgba(111, 87, 235, 0.5);
+}
+
+.navbar .nav_item .nav_link {
+  color: var(--textColor);
+}
+
+.navbar .nav_item .nav_link:hover {
+  color: var(--primaryColor);
+  text-shadow: 0 0 5px rgba(111, 87, 235, 0.3);
+}
