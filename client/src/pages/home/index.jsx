@@ -1,6 +1,8 @@
-import Navbar from "@/components/navbar/Navbar";
-import Featured from "@/components/featured/Featured";
-import List from "@/components/list/List";
+"use client"
+
+import Navbar from "@/components/Navbar";
+import Featured from "@/components/Featured";
+import List from "@/components/List";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import './styles.scss'

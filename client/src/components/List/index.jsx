@@ -1,7 +1,9 @@
-  import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+"use client"
+
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
   import { useRef, useState } from "react";
-  import ListItem from "../listItem/ListItem";
+  import ListItem from "../ListItem";
   import './styles.scss'
   
   export default function List({ list }) {

@@ -1,10 +1,12 @@
+"use client"
+
 import { FiPlay } from "react-icons/fi";
 import { IoMdAdd } from "react-icons/io";
 import { MdOutlineThumbDown, MdOutlineThumbUp } from "react-icons/md";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import './styles.scss'
 
 export default function ListItem({ index, item }) {
@@ -29,7 +31,7 @@ export default function ListItem({ index, item }) {
   }, [item]);
 
   return (
-    <Link to={{ pathname: "/watch", movie: movie }}>
+    <Link href={{ pathname: "/watch", movie: movie }}>
       <div
         className="listItem"
         style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}

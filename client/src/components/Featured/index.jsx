@@ -1,3 +1,5 @@
+"use client"
+
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { FiPlay } from "react-icons/fi";
 import axios from "axios";

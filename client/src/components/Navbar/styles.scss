@@ -4,6 +4,7 @@
   font-size: 14px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 999;
   background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
 
@@ -22,11 +23,25 @@
       display: flex;
       align-items: center;
 
+      .logo-container {
+        width: max-content;
+        display: block;
+        width: 150px;
+        margin-right: 1.5rem;
+
+        .logo {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+          display: flex;
+        }
+      }
+
       img {
         height: 25px;
         margin-right: 40px;
 
-        @include mobile {
+        @media (max-width: 480px) {
           display: none;
         }
       }
@@ -35,12 +50,12 @@
         margin-right: 20px;
         cursor: pointer;
 
-        @include tablet {
+        @media (max-width: 768px) {
           display: none;
         }
 
         &.navbarmainLinks {
-          @include tablet {
+          @media (max-width: 768px) {
             display: block;
           }
         }
@@ -52,6 +67,7 @@
       align-items: center;
 
       .icon {
+        font-size: 1.2rem;
         margin: 0px 15px;
         cursor: pointer;
       }

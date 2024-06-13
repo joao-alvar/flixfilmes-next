@@ -1,13 +1,15 @@
+"use client"
+
 import { IoMdArrowDropdown, IoMdNotifications, IoMdSearch  } from "react-icons/io";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../authContext/AuthContext";
-import { logout } from "../../authContext/AuthActions";
+import Link from "next/link";
+import Image from "next/image";
+import img from '/public/flixfilmes-logo.png'
+import avatar from '/public/user-standard-avatar.png'
 import './styles.scss'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { dispatch } = useContext(AuthContext);
 
   window.onscroll = () => {
     setIsScrolled(window.scrollY === 0 ? false : true);
@@ -17,17 +19,19 @@ const Navbar = () => {
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="container">
         <div className="left">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-            alt=""
+          <Link href="/" className="link logo-container">
+        <Image
+            src={img}
+            alt="Flixfilmes logo"
+            className="logo"
+            width={150}
+            height={120}
           />
-          <Link to="/" className="link">
-            <span>Homepage</span>
           </Link>
-          <Link to="/series" className="link">
+          <Link href="/series" className="link">
             <span className="navbarmainLinks">Series</span>
           </Link>
-          <Link to="/movies" className="link">
+          <Link href="/movies" className="link">
             <span className="navbarmainLinks">Movies</span>
           </Link>
           <span>New and Popular</span>
@@ -37,15 +41,17 @@ const Navbar = () => {
           <IoMdSearch className="icon" />
           <span>KID</span>
           <IoMdNotifications className="icon" />
-          <img
-            src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
+          <Image
+            src={avatar}
+            alt="Flixfilmes logo"
+            width={100}
+            height={100}
           />
           <div className="profile">
             <IoMdArrowDropdown className="icon" />
             <div className="options">
               <span>Settings</span>
-              <span onClick={() => dispatch(logout())}>Logout</span>
+              <span>Logout</span>
             </div>
           </div>
         </div>

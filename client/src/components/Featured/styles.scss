@@ -1,5 +1,3 @@
-@import "../../app.scss";
-
 .featured {
   height: 76vh;
   position: relative;
@@ -51,7 +49,7 @@
     .desc {
       margin: 20px 0px;
 
-      @include mobile {
+      @media (max-width: 480px) {
         width: 60vw;
       }
     }
