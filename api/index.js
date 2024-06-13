@@ -3,6 +3,12 @@ const app = express();
 
 const mongoose = require("mongoose");
 
+// Import routes
+const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
+const movieRoute = require("./routes/movies");
+const listRoute = require("./routes/lists");
+
 const dotenv = require("dotenv");
 // const cors = require("cors");
 
@@ -33,6 +39,10 @@ app.use(express.json());
 // );
 
 /** routes */
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/movies", movieRoute);
+app.use("/api/lists", listRoute);
 
 app.listen(PORT, () => {
   console.log(`Backend server is running! on http://localhost:${PORT}`);
