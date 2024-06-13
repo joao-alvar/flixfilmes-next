@@ -2,7 +2,7 @@
 
   import { useRef, useState } from "react";
   import ListItem from "../listItem/ListItem";
-  import "./list.scss";
+  import './styles.scss'
   
   export default function List({ list }) {
     const [isMoved, setIsMoved] = useState(false);

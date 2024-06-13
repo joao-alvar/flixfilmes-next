@@ -1,4 +1,3 @@
-import "./listItem.scss";
 import {
   PlayArrow,
   Add,
@@ -8,6 +7,7 @@ import {
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './styles.scss'
 
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
