@@ -1,9 +1,7 @@
-import {
-  PlayArrow,
-  Add,
-  ThumbUpAltOutlined,
-  ThumbDownOutlined,
-} from "@material-ui/icons";
+import { FiPlay } from "react-icons/fi";
+import { IoMdAdd } from "react-icons/io";
+import { MdOutlineThumbDown, MdOutlineThumbUp } from "react-icons/md";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -44,10 +42,10 @@ export default function ListItem({ index, item }) {
             <video src={movie.trailer} autoPlay={true} loop />
             <div className="itemInfo">
               <div className="icons">
-                <PlayArrow className="icon" />
-                <Add className="icon" />
-                <ThumbUpAltOutlined className="icon" />
-                <ThumbDownOutlined className="icon" />
+                <FiPlay className="icon" />
+                <IoMdAdd className="icon" />
+                <MdOutlineThumbUp className="icon" />
+                <MdOutlineThumbDown className="icon" />
               </div>
               <div className="itemInfoTop">
                 <span>{movie.duration}</span>

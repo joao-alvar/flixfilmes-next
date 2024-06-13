@@ -1,4 +1,5 @@
-import { InfoOutlined, PlayArrow } from "@material-ui/icons";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+import { FiPlay } from "react-icons/fi";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './styles.scss'
@@ -57,11 +58,11 @@ export default function Featured({ type, setGenre }) {
         <span className="desc">{content.desc}</span>
         <div className="buttons">
           <button className="play">
-            <PlayArrow />
+            <FiPlay />
             <span>Play</span>
           </button>
           <button className="more">
-            <InfoOutlined />
+            <IoMdInformationCircleOutline />
             <span>Info</span>
           </button>
         </div>
