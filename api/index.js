@@ -16,13 +16,12 @@ dotenv.config();
 
 // Environment variables
 const PORT = process.env.PORT || 8800;
-const URL = process.env.MONGO_URL || "";
+const CONNECTION_STRING = process.env.CONNECTION_STRING || "";
 
 mongoose
-  .connect(URL, {
+  .connect(CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useCreateIndex: true,
   })
   .then(() => console.log("DB Connection Successfull"))
   .catch((err) => {
